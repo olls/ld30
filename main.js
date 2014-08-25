@@ -1,5 +1,8 @@
-var BLOCK = 30; var SPEED = .05*BLOCK; var COLORS = {1: 0xA3ACCE, 2: 0x7805D9}; var P_SIZE = {top: BLOCK * 
-.2, bottom: BLOCK * .4, height: BLOCK * .8} var levels = [
+var BLOCK = 30; 
+var SPEED = .05*BLOCK;
+ var COLORS = {1: 0xA3ACCE, 2: 0x7805D9}; 
+var P_SIZE = {top: BLOCK * .2, bottom: BLOCK * .4, height: BLOCK * .8};
+ var levels = [
   [[
     [1, 1, 1, 1, 1, 1],
     [0, 0, 0, 0, 0, 1],
@@ -96,11 +99,12 @@ var BLOCK = 30; var SPEED = .05*BLOCK; var COLORS = {1: 0xA3ACCE, 2: 0x7805D9}; 
     [1,1,1,0,1,1],
     [1,1,1,1,1,1],
     [2,1,1,0,1,1]
-  ]] ]; var stop_level = false; function main() {
+  ]] ];
+ var stop_level = false;
+ function main() {
   var scene = new THREE.Scene();
   var renderer = new THREE.WebGLRenderer();
-  renderer.setSize(window.innerWidth, window.innerHeight - 
-document.getElementById('controls').scrollHeight);
+  renderer.setSize(window.innerWidth, window.innerHeight - document.getElementById('controls').scrollHeight);
   document.getElementById('game').appendChild(renderer.domElement);
   var keyboard = new THREEx.KeyboardState();
   var camera = create_camera();
@@ -147,10 +151,7 @@ function won(level, scene, renderer, keyboard, camera) {
   }
 }
 function create_camera() {
-  var camera = new THREE.OrthographicCamera(
-    window.innerWidth / -2, window.innerWidth / 2,
-    window.innerHeight / 2, window.innerHeight / -2,
-    -500, 1000
+  var camera = new THREE.OrthographicCamera(    window.innerWidth / -2, window.innerWidth / 2,window.innerHeight / 2, window.innerHeight / -2,  -500, 1000
   );
   camera.rotation.order = 'YXZ';
   camera.rotation.y = - Math.PI / 4;
