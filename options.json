@@ -3,6 +3,10 @@
         "vps87319": {
             "output": "/var/www/oliverfaircliff.com/ld30",
             "url": "http://oliverfaircliff.com/ld30"
+        },
+        "oliverfaircliff": {
+            "output": "/var/www/oliverfaircliff.com/ld30",
+            "url": "http://oliverfaircliff.com/ld30"
         }
     }
 }
