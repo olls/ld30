@@ -1,7 +1,7 @@
 {
     "hosts": {
         "oliverfaircliff": {
-            "output": "/var/www/oliverfaircliff.com/ld30",
+            "copy_to": "/var/www/oliverfaircliff.com/ld30",
             "url": "http://oliverfaircliff.com/ld30"
         }
     }
